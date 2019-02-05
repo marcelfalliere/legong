@@ -1,0 +1,23 @@
+{
+  "name": "lebouton-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelfalliere/LeBouton-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelfalliere/LeBouton-website/issues"
+  },
+  "homepage": "https://github.com/marcelfalliere/LeBouton-website#readme",
+  "devDependencies": {
+    "parcel": "^1.11.0"
+  }
+}
