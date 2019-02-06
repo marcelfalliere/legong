@@ -19,8 +19,5 @@
   "homepage": "https://github.com/marcelfalliere/LeBouton-website#readme",
   "devDependencies": {
     "parcel": "^1.11.0"
-  },
-  "dependencies": {
-    "flexboxgrid": "^6.3.1"
   }
 }
