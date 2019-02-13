@@ -1,5 +1,4 @@
-import css from './styles/index.css';
-import simpleGrid from './styles/libs/simple-grid.css';
+import less from './styles/index.less';
 
 import main from './src/main';
 

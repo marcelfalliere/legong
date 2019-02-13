@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/marcelfalliere/LeBouton-website#readme",
   "devDependencies": {
+    "less": "^3.9.0",
     "parcel": "^1.11.0"
   }
 }
