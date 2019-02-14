@@ -1,84 +1,86 @@
+@import '_variables';
 
-/* <= 540*/
-@media only screen and (max-width: 540px) {
+@media only screen and (max-device-width: 420px) { // Media query smartphone 
+    
     .jumbotron {
-        height:350px;
+        height:950px;
         padding-top:30px;
         margin-bottom:140px;
+        background-image: linear-gradient(-50deg, @green, @yellow 20%, @green);
         h2 {
-            font-size: 1.5rem;
+            font-size: 3.5rem;
         }
         h1 {
-            margin:25px 0;
-            font-size: 4.5rem;
+            margin:5px 0;
+            font-size: 8rem;
         }
         ol {
-            li .card {
+            flex-direction: column;
+            li {
+                flex: none;
+                display: block;
                 height: 180px;
+                padding: 1rem 0;
+                margin: 0;
+
+                .card {
+                    width:80%;
+                    margin:0 auto;
+                    height:100%;
+                }
+
+
+                &:before {
+                    top: @jumbotronOffsetBreadcrumb*1.66;
+                }
+            }
+
+            li:nth-child(odd) {
+                border-top: 0px;
+                border-right: 5px dashed @eyeCatcherColor;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: @jumbotronOffsetBreadcrumb;
+
+                &:before {
+                    right: -@jumbotronCounterSize/@gold;
+                    left:auto;
+                }
+            }
+            
+            li:nth-child(even) {
+                border-top-right-radius: 0px;
+                border-top: 5px dashed @eyeCatcherColor;
+                border-top-left-radius: @jumbotronOffsetBreadcrumb;
+                border-left: 5px dashed @eyeCatcherColor;
+                border-bottom-left-radius: @jumbotronOffsetBreadcrumb;
+                border-bottom: 5px dashed @eyeCatcherColor;
+                border-right: 0px;
+
+                margin-right:@jumbotronOffsetBreadcrumb;
+                margin-top: -5px;
             }
         } 
     }
 } 
 
-/* Small devices > 540 */
-@media only screen and (min-width: 540px) {
-    .jumbotron {
-        height:350px;
-        padding-top:30px;
-        margin-bottom:200px;
-        h2 {
-            font-size: 1.8rem;
-        }
-        h1 {
-            margin:25px 0;
-            font-size: 6.5rem;
-        }
-        ol {
-            li .card {
-                height: 180px;
-            }
-        } 
-    }
-} 
 
-/* landscape tablets ... > 720 */
-@media only screen and (min-width: 720px) {
-    .jumbotron {
-        height:400px;
-        padding-top:40px;
-        margin-bottom:280px;
-        h2 {
-            font-size: 2.2rem;
-        }
-        h1 {
-            margin:30px 0;
-            font-size: 6.5rem;
-        }
-        ol {
-            li .card {
-                height: 200px;
-            }
-        } 
-    }
-} 
-
-/* laptops/desktops  > 960*/
-@media only screen and (min-width: 960px) {
-    .jumbotron {
-        height:600px;
-        padding-top:70px;
-        margin-bottom:300px;
-        h2 {
-            font-size: 2.2rem;
-        }
-        h1 {
-            margin:70px 0;
-            font-size: 6.5rem;
-        }
-        ol {
-            li .card {
-                height: 280px;
-            }
-        } 
-    }
-} 
+// /* laptops/desktops  > 960*/
+// @media only screen and (min-width: 960px) {
+//     .jumbotron {
+//         height:600px;
+//         padding-top:70px;
+//         margin-bottom:300px;
+//         h2 {
+//             font-size: 2.2rem;
+//         }
+//         h1 {
+//             margin:70px 0;
+//             font-size: 6.5rem;
+//         }
+//         ol {
+//             li .card {
+//                 height: 280px;
+//             }
+//         } 
+//     }
+// } 
