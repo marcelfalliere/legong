@@ -3,17 +3,19 @@
 @media only screen and (max-device-width: 420px) { // Media query smartphone 
     
     .jumbotron {
-        height:950px;
+        height:970px;
         padding-top:30px;
         margin-bottom:140px;
         background-image: linear-gradient(-50deg, @green, @yellow 20%, @green);
+
         h2 {
             font-size: 3.5rem;
         }
         h1 {
-            margin:5px 0;
+            margin:3rem 0;
             font-size: 8rem;
         }
+
         ol {
             flex-direction: column;
             li {
@@ -26,9 +28,8 @@
                 .card {
                     width:80%;
                     margin:0 auto;
-                    height:100%;
+                    height: 180px;
                 }
-
 
                 &:before {
                     top: @jumbotronOffsetBreadcrumb*1.66;
@@ -37,27 +38,52 @@
 
             li:nth-child(odd) {
                 border-top: 0px;
-                border-right: 5px dashed @eyeCatcherColor;
+                border-right: @jumbotronBreadcrumbBorderSizeResponsive dashed @eyeCatcherColor;
                 border-top-right-radius: 0px;
                 border-bottom-right-radius: @jumbotronOffsetBreadcrumb;
+                margin-top:0;
+                margin-left:@jumbotronOffsetBreadcrumb;
+
+                &:not(:first-child) {
+                    border-top-right-radius: @jumbotronOffsetBreadcrumb;
+                }
 
                 &:before {
                     right: -@jumbotronCounterSize/@gold;
                     left:auto;
                 }
+
+                .card {
+                    margin-left:15%;
+                }
             }
             
             li:nth-child(even) {
                 border-top-right-radius: 0px;
-                border-top: 5px dashed @eyeCatcherColor;
+                border-top: @jumbotronBreadcrumbBorderSizeResponsive dashed @eyeCatcherColor;
                 border-top-left-radius: @jumbotronOffsetBreadcrumb;
-                border-left: 5px dashed @eyeCatcherColor;
+                border-left: @jumbotronBreadcrumbBorderSizeResponsive dashed @eyeCatcherColor;
                 border-bottom-left-radius: @jumbotronOffsetBreadcrumb;
-                border-bottom: 5px dashed @eyeCatcherColor;
+                border-bottom: @jumbotronBreadcrumbBorderSizeResponsive dashed @eyeCatcherColor;
                 border-right: 0px;
 
                 margin-right:@jumbotronOffsetBreadcrumb;
-                margin-top: -5px;
+                margin-top:0;
+
+                &:before {
+                    left: -@jumbotronCounterSize/@gold;
+                    right:auto;
+                }
+
+                .card {
+                    margin-right:15%;
+                }
+            }
+
+            li:last-child {
+                height: 110px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
             }
         } 
     }
