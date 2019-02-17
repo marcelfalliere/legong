@@ -1,9 +1,9 @@
 @import '_variables';
 
-@media only screen and (max-device-width: 420px) { // Media query smartphone 
+@media only screen and (max-device-width: 426px) { // Media query smartphone 
     
     .jumbotron {
-        height:1050px;
+        height:1100px;
         padding-top:30px;
         margin-bottom:140px;
         background-image: linear-gradient(-50deg, @green, @yellow 20%, @green);
@@ -23,16 +23,39 @@
                 flex: none;
                 display: block;
                 height: 180px;
-                padding: 1rem 0;
+                padding: 2rem 0;
                 margin: 0;
 
                 .card {
                     width:80%;
                     margin:0 auto;
                     height: 180px;
+                    text-align: initial; 
+                    display: flex;
+                    align-items: center;
+                    overflow: visible;
+
+                    h3 {
+                        margin:0;
+                        margin-left: 1rem;
+                        display: inline-block;
+                        font-size: 2.5rem;
+                    }
+
+                    img {
+                        max-height:none;
+                        max-width: none;
+                        
+                        height: 240px;
+                        //top:-@jumbotronCardImgPadding;
+                        right: 0;
+                        bottom: 0;
+                        left:auto;
+                    }
                 }
 
                 &:before {
+                    font-size: 1.4rem;
                     top: @jumbotronOffsetBreadcrumb*1.66;
                 }
             }
@@ -82,7 +105,7 @@
             }
 
             li:last-child {
-                height: 138px;
+                height: 95px;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }

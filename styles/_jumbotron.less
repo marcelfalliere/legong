@@ -6,7 +6,7 @@
     width: 100%;
     z-index: 100 !important;
     height: 650px;
-    padding-top:30px;
+    padding-top:20px;
     margin-bottom:150px;
 
     * {
@@ -14,7 +14,7 @@
     }
     h2 {
         font-size: 3.2rem;
-        margin:70px 0;
+        margin:3rem 0;
     }
 
     h1 {
@@ -23,6 +23,7 @@
         font-weight:100;
         text-shadow: 2px 2px 26px @green,
                     -2px -2px 26px @dark;
+        margin: 3rem 0;
     }
 
     ol {
@@ -36,26 +37,39 @@
         list-style-type: none;
         
         li {
-            position: relative;
             height:@jumbotronOffsetBreadcrumb;
             flex-grow:1;
             margin: -.5px; /* so dashed are aligned */
-            
+            position: relative;
+
             border-top: 1px dashed @eyeCatcherColor;
             border-right: 1px dashed @eyeCatcherColor;
             border-top-right-radius: @jumbotronOffsetBreadcrumb/2;
 
             .card {
+                position: relative;
                 background-color: @dark;
                 margin:1.2rem .9rem;
                 box-shadow:-4px 4px 10px @dark;
                 height: 230px;
                 padding: .9rem;
                 box-sizing: border-box;
+                overflow: hidden;
 
                 h3 {
                     display: block;
                     margin: 0;
+                    line-height: 1.2rem;
+                }
+
+                img {
+                    position: absolute;
+                    right:@jumbotronCardImgPadding;
+                    left:@jumbotronCardImgPadding;
+                    margin: 0 auto;
+                    max-width: calc(100% - 2 * @jumbotronCardImgPadding);
+                    max-height:60%;
+                    bottom:@jumbotronCardImgPadding;
                 }
             }
         }
