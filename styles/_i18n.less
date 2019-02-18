@@ -1,9 +1,16 @@
 #i18n-menu {
     position: absolute;
     right:0;
+
+    &.hidden {
+        display:none;
+    }
+
     select {
-        text-align: right;   
-        display: inline-block;
-        padding: 10px;
+        -webkit-appearance: none; 
+        -moz-appearance: none;
+        appearance: none; 
+        border:none;
+        background-color: transparent;    
     }
 }
