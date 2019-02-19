@@ -1,3 +1,4 @@
+import {httpreq} from './httpreq';
 
 export class i18n {
 
@@ -42,15 +43,33 @@ export class i18n {
             i18n.loadLangStrings(lang);
         }
 
-        $select.addEventListener('change', (event: Event) => {
-            const lang = (event.target as HTMLSelectElement).value;
+        $select.addEventListener('change', async (event: Event) => {
+            
+            const $select = (event.target as HTMLSelectElement);
 
-            i18n.loadLangStrings(lang);
+            $select.setAttribute('disabled', 'true');
+
+            const lang = $select.value;
+
+            await i18n.loadLangStrings(lang);
+
+            $select.removeAttribute('disabled');
+
         });
 
     }
 
-    private static loadLangStrings(lang: string) {
+    private static async loadLangStrings(lang: string) {
+
+        const langData = await httpreq.get(`/locales/${lang}.json`);
+
+        [].forEach.call(document.querySelectorAll('[data-i18n]'), ($el: HTMLElement) => {
+            const i18nKey = $el.getAttribute('data-i18n');
+            if (langData[i18nKey]) {
+                $el.innerText = langData[i18nKey];
+            }
+        });
+
         // TODO ; mieux d'avoir une page index.html par langue ? de toute façon il n'y aura qu'une page ... ou alors de faire du JS pour internationnlisé ?
         // https://webmasters.stackexchange.com/questions/119138/root-index-html-file-of-a-multi-language-website
         // et balises meta
