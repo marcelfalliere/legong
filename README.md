@@ -5,8 +5,10 @@
 
 git checkout gh-pages
 git merge master
+npm run clean
+npm run clean
 git subtree push --prefix dist origin gh-pages
-
+git checkout master
 
 **Generate a gif from mov**
 
