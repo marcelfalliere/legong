@@ -6,6 +6,7 @@
 # on master, commit everything ...
 
 npm run build
+git commit -am "release"
 git subtree split --prefix dist -b gh-pages
 git push -f origin gh-pages
 git branch -D gh-pages
