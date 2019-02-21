@@ -4,7 +4,8 @@
 **Deploy**
 
 git checkout gh-pages
-git merge master
+git pull --rebase
+git merge master --no-edit
 npm run clean
 npm run build
 git add dist
