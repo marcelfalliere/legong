@@ -1,5 +1,12 @@
 {
-    "main-name": "le gong (en)",
-    "head-title": "sauvé par le gong (en)",
-    "jumbo-subtitle": "Get out of any situation with (en)"
+    "main-name": "le gong",
+    "head-title": "Get out of any situation with le gong",
+    "jumbo-subtitle": "Get out of any situation with",
+    "jumbo-problem": "A talkative coworker ?",
+    "jumbo-solution": "Press the <em class=\"gong\">le gong</em> button",
+    "jumbo-outcome": "<em class=\"gong\">« </em>Sorry I have to take this<em class=\"gong\"> »</em>",
+    "content-minipitch": "By the press of a button (multiple flavors available!), make your phone ring like someone is calling you.",
+    "content-how-title": "How does it work ?",
+    "content-how-p1": "<em class=\"gong\">le gong</em> communicates with the smartphone with Bluetooth low energy (also known as BLE). BLE is a wireless technology. This tech is standard, available almost on any device (iOS and Android) and does not need a lot of battery power to work. <em class=\"gong\">le gong</em> is paired with your phone ; don't worry! other bluetooth devices can work along <em class=\"gong\">le gong</em> : your earpods, your portable speaker, whatever.</em>",
+    "content-how-p2": "The companion app (iOS and Android) allows you to configure the behaviour of a <em class=\"gong\">le gong</em> button click. You can choose who is calling you (picture, name, number). You can also select a time offset to determine how long after a button push your smartphone should ring."
 }

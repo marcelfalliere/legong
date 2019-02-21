@@ -66,7 +66,7 @@ export class i18n {
         [].forEach.call(document.querySelectorAll('[data-i18n]'), ($el: HTMLElement) => {
             const i18nKey = $el.getAttribute('data-i18n');
             if (langData[i18nKey]) {
-                $el.innerText = langData[i18nKey];
+                $el.innerHTML = langData[i18nKey];
             }
         });
 

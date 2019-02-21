@@ -3,14 +3,12 @@
 
 **Deploy**
 
-git checkout gh-pages
-git merge master --no-edit
-npm run clean
+# on master, commit everything ...
+
 npm run build
-git add dist
-git commit -m "new release"
-git subtree push --prefix dist origin gh-pages
-git checkout master
+git subtree split --prefix dist -b gh-pages
+git push -f origin gh-pages:gh-pages
+git branch -D gh-pages
 
 **Generate a gif from mov**
 

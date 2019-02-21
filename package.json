@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html --no-cache",
-    "build": "parcel build index.html --public-url /legong/ --no-cache",
-    "clean": "rimraf dist/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist/ && parcel build index.html --public-url /legong/ --no-cache"
   },
   "repository": {
     "type": "git",
