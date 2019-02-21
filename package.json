@@ -20,6 +20,11 @@
   "devDependencies": {
     "less": "^3.9.0",
     "parcel": "^1.11.0",
+    "parcel-plugin-copy": "^1.0.2",
     "typescript": "^3.3.3"
+  },
+  "staticPath": {
+    "source": ["/assets/lazyloaded"],
+    "target": ["/dist/"]
   }
 }
