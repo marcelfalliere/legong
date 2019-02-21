@@ -27,10 +27,12 @@
   },
   "staticPath": {
     "source": [
-      "/assets/lazyloaded"
+      "/assets/lazyloaded",
+      "/locales"
     ],
     "target": [
-      "/dist/"
+      "/dist/",
+      "/dist/locales"
     ]
   },
   "dependencies": {

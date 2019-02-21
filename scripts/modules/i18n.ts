@@ -61,7 +61,7 @@ export class i18n {
 
     private static async loadLangStrings(lang: string) {
 
-        const langData = await httpreq.get(`/locales/${lang}.json`);
+        const langData = await httpreq.get(`./locales/${lang}.json`);
 
         [].forEach.call(document.querySelectorAll('[data-i18n]'), ($el: HTMLElement) => {
             const i18nKey = $el.getAttribute('data-i18n');
