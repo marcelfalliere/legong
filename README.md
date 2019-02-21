@@ -4,7 +4,6 @@
 **Deploy**
 
 git checkout gh-pages
-git pull --rebase
 git merge master --no-edit
 npm run clean
 npm run build
