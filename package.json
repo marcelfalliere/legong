@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html --no-cache",
-    "build": "parcel build index.html --no-cache",
+    "build": "parcel build index.html --public-url /legong/ --no-cache",
+    "clean": "rimraf dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,14 @@
     "typescript": "^3.3.3"
   },
   "staticPath": {
-    "source": ["/assets/lazyloaded"],
-    "target": ["/dist/"]
+    "source": [
+      "/assets/lazyloaded"
+    ],
+    "target": [
+      "/dist/"
+    ]
+  },
+  "dependencies": {
+    "rimraf": "^2.6.3"
   }
 }
