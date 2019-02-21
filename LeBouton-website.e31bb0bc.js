@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/Users/fredericfalliere/LeBouton-website/assets/flavors/flower-bg.jpg":[["flower-bg.cc60e779.jpg","assets/flavors/flower-bg.jpg"],"assets/flavors/flower-bg.jpg"],"/Users/fredericfalliere/LeBouton-website/assets/flavors/lepen-bg.jpg":[["lepen-bg.8b958553.jpg","assets/flavors/lepen-bg.jpg"],"assets/flavors/lepen-bg.jpg"],"/Users/fredericfalliere/LeBouton-website/assets/footer.jpg":[["footer.c8ae61df.jpg","assets/footer.jpg"],"assets/footer.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"scripts/modules/httpreq.ts":[function(require,module,exports) {
+},{"/Users/fred/Code/LeBouton-website/assets/flavors/flower-bg.jpg":[["flower-bg.cc60e779.jpg","assets/flavors/flower-bg.jpg"],"assets/flavors/flower-bg.jpg"],"/Users/fred/Code/LeBouton-website/assets/flavors/lepen-bg.jpg":[["lepen-bg.8b958553.jpg","assets/flavors/lepen-bg.jpg"],"assets/flavors/lepen-bg.jpg"],"/Users/fred/Code/LeBouton-website/assets/footer.jpg":[["footer.c8ae61df.jpg","assets/footer.jpg"],"assets/footer.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"scripts/modules/httpreq.ts":[function(require,module,exports) {
 "use strict";
 
 var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
@@ -722,7 +722,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64581" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57725" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

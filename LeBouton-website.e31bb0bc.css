@@ -178,7 +178,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 720px) {  /* 720px */
+@media only screen and (min-width: 626px), (min-device-width: 426px) {  /* 720px */
   .col-1 {
     width: 4.33%;
   }
@@ -269,14 +269,13 @@ h2 {
   width: 100%;
   z-index: 100 !important;
   height: 650px;
-  padding-top: 20px;
   margin-bottom: 150px;
 }
 .jumbotron * {
   color: #FEFADE;
 }
 .jumbotron h2 {
-  font-size: 3.2rem;
+  font-size: 2.3rem;
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
@@ -285,14 +284,14 @@ h2 {
   width: 4rem;
   left: 50%;
   margin-left: -2rem;
-  top: 0;
+  top: 0.5rem;
 }
 .jumbotron h1 {
   font-family: 'Pacifico', cursive;
   font-size: 6.5rem;
   font-weight: 100;
   text-shadow: 2px 2px 26px #95C623, -2px -2px 26px #404e4d;
-  margin: 3rem 0;
+  margin-top: 3rem;
   display: inline-block;
 }
 .jumbotron ol {
@@ -308,6 +307,7 @@ h2 {
 .jumbotron ol li {
   height: 20px;
   flex-grow: 1;
+  flex-shrink: 0;
   margin: -0.5px;
   /* so dashed are aligned */
   position: relative;
@@ -361,7 +361,7 @@ h2 {
   background-color: #C3423F;
   border-radius: 30px;
 }
-@media only screen and (max-device-width: 426px) {
+@media only screen and (max-device-width: 426px), (max-width: 626px) {
   .jumbotron {
     height: 1100px;
     padding-top: 30px;
@@ -369,11 +369,13 @@ h2 {
     background-image: linear-gradient(-50deg, #95C623, #FDE74C 20%, #95C623);
   }
   .jumbotron h2 {
-    font-size: 3.5rem;
-    margin-top: 30px;
+    font-size: 2.6rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
   }
   .jumbotron h1 {
-    margin: 3rem 0;
+    margin-top: 0;
+    margin-bottom: 3rem;
     font-size: 8rem;
   }
   .jumbotron ol {
@@ -455,19 +457,10 @@ h2 {
     border-bottom-right-radius: 0;
   }
 }
-@media only screen and (max-device-width: 380px) {
-  li {
-    background-color: blue !important;
-  }
-}
-@media only screen and (min-device-width: 1200px) {
-  li {
-    background-color: red !important;
-  }
-}
 #i18n-menu {
   position: absolute;
   right: 0;
+  top: 0;
 }
 #i18n-menu.hidden {
   display: none;
@@ -478,6 +471,11 @@ h2 {
   appearance: none;
   border: none;
   background-color: transparent;
+  font-size: 2rem;
+  color: #404e4d;
+  width: 5rem;
+  height: 5rem;
+  text-align-last: center;
 }
 .body-content h2 {
   font-size: 2.3rem;
@@ -524,7 +522,7 @@ h2 {
   left: 0;
 }
 .body-content .who {
-  line-height: 1.7rem;
+  font-size: 1.2rem;
 }
 .body-content .who .pic {
   width: 200px;
@@ -546,6 +544,14 @@ h2 {
 .body-content .flavors .pic {
   width: 100%;
 }
+@media only screen and (max-device-width: 426px), (max-width: 626px) {
+  .body-content .separator {
+    margin: 2rem 0;
+  }
+  .body-content .who {
+    font-size: 2rem;
+  }
+}
 #mc_embed_signup form {
   text-align: center;
   padding: 10px 0 10px 0;
@@ -554,7 +560,7 @@ h2 {
   display: inline-block;
 }
 #mc_embed_signup input.email {
-  font-size: 15px;
+  font-size: 1.5rem;
   border: 1px solid #6e8684;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -562,18 +568,18 @@ h2 {
   color: #404e4d;
   background-color: #fff;
   box-sizing: border-box;
-  height: 32px;
+  height: 2.5rem;
   padding: 0px 0.4em;
   display: inline-block;
   margin: 0;
-  width: 350px;
+  width: 400px;
   vertical-align: top;
 }
 #mc_embed_signup .clear {
   display: inline-block;
 }
 #mc_embed_signup .button {
-  font-size: 13px;
+  font-size: 1.5rem;
   border: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -582,7 +588,7 @@ h2 {
   color: #fff;
   background-color: #C3423F;
   box-sizing: border-box;
-  height: 32px;
+  height: 2.5rem;
   line-height: 32px;
   padding: 0 18px;
   display: inline-block;
@@ -626,7 +632,7 @@ h2 {
   text-align: left;
   padding: 0.5em 0;
 }
-@media (max-width: 768px) {
+@media only screen and (max-device-width: 426px), (max-width: 626px) {
   #mc_embed_signup input.email {
     width: 100%;
     margin-bottom: 5px;
@@ -652,6 +658,7 @@ footer {
   background-size: cover;
   background-position: center;
   position: relative;
+  box-sizing: border-box;
 }
 footer[data-lazyload-bg=loaded] {
   background-image: url('footer.c8ae61df.jpg');
