@@ -10,6 +10,12 @@
     "content-how-p1": "<em class=\"gong\">le gong</em> communicates with the smartphone with Bluetooth low energy (also known as BLE). BLE is a wireless technology. This tech is standard, available almost on any device (iOS and Android) and does not need a lot of battery power to work. <em class=\"gong\">le gong</em> is paired with your phone ; don't worry! other bluetooth devices can work along <em class=\"gong\">le gong</em> : your earpods, your portable speaker, whatever.</em>",
     "content-how-p2": "The companion app (iOS and Android) allows you to configure the behaviour of a <em class=\"gong\">le gong</em> button click. You can choose who is calling you (picture, name, number). You can also select a time offset to determine how long after a button push your smartphone should ring.",
     "content-buy-title": "Where can I buy one ?",
-    "content-buy-p1": "Where are not yet ready for shipping a fully finished, polished, product. Subscribe to the newletter so you won't miss the release :"
-          
+    "content-buy-p1": "Where are not yet ready for shipping a fully finished, polished, product. Subscribe to the newletter so you won't miss the release :",
+    "content-who-title": "Who is behind <em class=\"gong\">le gong</em> ?</h2>",
+    "content-who-ff": "project initiator. Android and iOS app developer.",
+    "content-who-mh": "the hardware guy !",
+    "content-flavor-flower": "Discover a flavor : </span><em class=\"gong\">le flower pot</em>",
+    "content-flavor-pen": "Discover a flavor : </span><em class=\"gong\">le pen pot</em>",
+    "footer-newsletter": "Remember to subscribe to the newletter.",
+    "footer-thankyou": "Thank you."
 }
