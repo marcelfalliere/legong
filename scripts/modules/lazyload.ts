@@ -20,9 +20,25 @@ export class lazyload {
         [].forEach.call($els, ($el: HTMLElement) => {
             if ($el.getAttribute('src').indexOf('base64') > 0) {
                 if (lazyload.isVisible($el)) {
-                    const src = $el.getAttribute('data-src');
-                    console.log(`[lazyload] loading image ${src}`);
-                    $el.setAttribute('src', src);
+                    if ($el.getAttribute('data-blurloading')) {
+                        const src = $el.getAttribute('data-src');
+                        const blurloading = $el.getAttribute('data-blurloading');
+                        console.log(`[lazyload] loading image ${blurloading} but actually lazy loading ${src}`);
+                        $el.setAttribute('src', blurloading);
+
+                        const actualImage = new Image();
+                        actualImage.onload = function () {
+                            console.log(`[lazyload] ${src} loaded`);
+                            $el.setAttribute('src', src);
+                        }
+                        actualImage.src = src;
+
+
+                    } else {
+                        const src = $el.getAttribute('data-src');
+                        console.log(`[lazyload] loading image ${src}`);
+                        $el.setAttribute('src', src);
+                    }
                 }
             }
         });
@@ -45,7 +61,7 @@ export class lazyload {
 
         var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
         var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-        var vertInView = (bounding.top <= windowHeight) && ((bounding.top + bounding.height) >= 0);
+        var vertInView = (bounding.top - 200 <= windowHeight) && ((bounding.top + bounding.height) >= 0);
         var horInView = (bounding.left <= windowWidth) && ((bounding.left + bounding.width) >= 0);
         return (vertInView && horInView);
 
